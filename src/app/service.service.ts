@@ -19,22 +19,22 @@ private  highprioritylist: Highprioritylist;
   //private userUrl = '/api';
 
   public getHighprioritylist() {
-    return this.http.get<Highprioritylist>('http://localhost:1342/145/prioritys');
+    return this.http.get<Highprioritylist>('http://13.233.82.118:8111/145/prioritys');
   }
 
   public getMediumprioritylist() {
-    return this.http.get<Mediumprioritylist>('http://localhost:1342/145/MediumPriority');
+    return this.http.get<Mediumprioritylist>('http://13.233.82.118:8111/145/MediumPriority');
   }
 
 
    
   public getLowprioritylist() {
-    return this.http.get<Lowprioritylist>('http://localhost:1342/145/LowPriority');
+    return this.http.get<Lowprioritylist>('http://13.233.82.118:8111/145/LowPriority');
   }
 
 
   public getPrioritys(highprioritylist) {
-    return this.http.get<Highprioritylist>('http://localhost:1342/145/getPrioritys/'+ highprioritylist.priority_Id);
+    return this.http.get<Highprioritylist>('http://13.233.82.118:8111/145/getPrioritys/'+ highprioritylist.priority_Id);
   }
 
    
@@ -54,7 +54,7 @@ public getter()
 
 
 public updatePriority(highprioritylist) {
-  return this.http.put<Highprioritylist>('http://localhost:1342/145/updatePriority', highprioritylist);
+  return this.http.put<Highprioritylist>('http://13.233.82.118:8111/145/updatePriority', highprioritylist);
 }
 
    
