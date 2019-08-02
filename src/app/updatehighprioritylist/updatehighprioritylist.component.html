@@ -1,0 +1,72 @@
+<div class="col-12 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Issues Details</h4>
+      <p class="card-description" style="columns: #931445;">
+        
+      </p>
+      <form class="forms-sample"  #f="ngForm" (ngSubmit)="addCustomer(f)" novalidate>
+        <div class="form-group">
+          <label for="exampleInputName1">Priority_Id</label>
+          <input type="text"[(ngModel)]="Highprioritylist.Priority_Id" name="Priority_Id" class="form-control" id="exampleInputName1" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName2">Trip_Id</label>
+            <input type="text" [(ngModel)]="customer.issue_Type" name="issueType" class="form-control" id="exampleInputName1" placeholder="">
+        </div> 
+
+
+        <div class="form-group">
+          <label for="exampleInputName2">issueType</label>
+          <input type="text" [(ngModel)]="Highprioritylist.issueType" name="issueType" class="form-control" id="exampleInputName1" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputName2">Issue</label>
+        <input type="text" [(ngModel)]="Highprioritylist.Issue" name="Issue" class="form-control" id="exampleInputName1" placeholder="">
+    </div>
+
+
+
+<!-- <div> solution:
+<select class="form-control">
+  <option *ngFor = "let i of solution">{{i}}</option>
+</select>
+</div> -->
+
+
+<label>Status</label>
+<select class="form-control">
+  <option>select status</option>
+  <option>under process</option>
+  <option>completed</option>
+</select>
+
+
+    <!-- <div class="form-group">
+      <label for="exampleInputName2">Status</label>
+      <input type="text" [(ngModel)]="customer.issue_Type" name="issueType" class="form-control" id="exampleInputName1" placeholder="">
+  </div> -->
+
+
+
+        <div class="form-group">
+          <label for="exampleInputPassword4"> Description</label>
+          <textarea [(ngModel)]="Highprioritylist.Description" name="description" class="form-control"  id="exampleTextarea1" rows="4"></textarea>
+        </div>
+
+
+         
+
+
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button class="btn btn-light">Cancel</button>
+          <button type="submit" class="btn btn-success">Assign To level3</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+ 
+<router-outlet></router-outlet>

@@ -1,0 +1,31 @@
+<div class="col-md-12">
+    <h2> Medium Priority List</h2>
+    <table class="table table-striped table-bordered">
+      <thead >
+      <tr>
+        <th class="hidden">Priority_Id</th>
+        <th>Trip_Id</th>
+        <th>Issue</th>
+        <th>Type Of Issue</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+       <tr *ngFor="let mediumprioritylist of mediumprioritylist.data">
+        <td >{{mediumprioritylist.priority_Id}}</td>
+        <td >{{mediumprioritylist.trip_Id}}</td>
+        <td>{{mediumprioritylist.issues}}</td>
+        <td>{{mediumprioritylist.issueType}}</td>
+        <td>{{mediumprioritylist.description}}</td>
+        <td>{{mediumprioritylist.status}}</td>
+        <td><button class="btn btn-danger"(click)="getPrioritys(mediumprioritylist)"> View Details</button></td>
+       </tr>
+
+      </tbody>
+    </table>
+    </div>
+  
+  
+<router-outlet></router-outlet>

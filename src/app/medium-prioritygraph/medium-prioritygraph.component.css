@@ -1,0 +1,11 @@
+/* .chart2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+} */
+
+.btm1{
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}

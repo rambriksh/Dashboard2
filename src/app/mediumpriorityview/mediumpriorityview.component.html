@@ -1,0 +1,71 @@
+<div class="col-12 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Issues Details</h4>
+      <p class="card-description" style="columns: #931445;">
+        
+      </p>
+      <form class="forms-sample"  #f="ngForm" (ngSubmit)="updatePriority(f)" novalidate>
+        <div class="form-group">
+          <label for="exampleInputName1">Priority_Id</label>
+          <input type="text"[(ngModel)]="mediumprioritylist.priority_Id" name="priority_Id" class="form-control" id="exampleInputName1" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName2">Trip_Id</label>
+            <input type="text" [(ngModel)]="mediumprioritylist.trip_Id" name="trip_Id" class="form-control" id="exampleInputName1" placeholder="">
+        </div> 
+
+
+        <div class="form-group">
+          <label for="exampleInputName2">Issue</label>
+          <input type="text" [(ngModel)]="mediumprioritylist.issues" name="issues" class="form-control" id="exampleInputName1" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputName2">IssueType</label>
+        <input type="text" [(ngModel)]="mediumprioritylist.issueType" name="issueType" class="form-control" id="exampleInputName1" placeholder="">
+    </div>
+
+    <!-- <div class="form-group">
+    <label>Status</label>
+    <select class="form-control">
+      <option>select status</option>
+      <option>under process</option>
+      <option>completed</option>
+      <input type="text" [(ngModel)]="highprioritylist.status" name="status" class="form-control" id="exampleInputName1" placeholder="">
+    </select>
+    </div> -->
+
+
+     <div class="form-group">
+      <label for="exampleInputName2">Status</label>
+  
+      <select class="form-control"  [(ngModel)]="mediumprioritylist.status" name="status" class="form-control" id="exampleInputName1" placeholder="">
+        <option>select status</option>
+        <option>under process</option>
+        <option>completed</option>
+      </select>
+  
+    </div> 
+ 
+
+
+        <div class="form-group">
+          <label for="exampleInputPassword4"> Description</label>
+          <textarea [(ngModel)]="mediumprioritylist.description" name="description" class="form-control"  id="exampleTextarea1" rows="4"></textarea>
+        </div>
+
+
+         
+
+
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button class="btn btn-light">Cancel</button>
+          <button type="submit" class="btn btn-success" >Assign_level3</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
